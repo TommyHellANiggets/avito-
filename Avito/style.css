@@ -1,0 +1,21 @@
+:root {
+    --color1: #f3f3f3;
+}
+
+HTML {
+    background-color: var(--color1);
+}
+
+.horizontal-line {
+    padding: 1px 5px;
+}
+
+nav {
+    padding:  auto 0;
+}
+
+.container {
+    width: 50%;
+    
+  }
+  
