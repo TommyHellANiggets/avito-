@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Главная</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <style>
+        .profile-container {
+            border-radius: 15px;
+            padding: 40px 50px; /* Уменьшаем отступы внутри контейнера */
+            background-color: #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        .profile-container form {
+            width: 66.67%; /* Устанавливаем ширину формы на 66.67% (100% / 1.5) */
+            margin: 0 auto; /* Центрируем форму по горизонтали */
+        }
+        .profile-container form input {
+            width: 100%; /* Устанавливаем ширину полей ввода на 100% */
+            background-color: #f3f3f3; /* Меняем цвет полей ввода на #f3f3f3 */
+        }
+        .avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        h1 {
+            margin-top: 2em; /* Увеличиваем отступ сверху в 2 раза */
+        }
+        .separator {
+            background-color: #b3b3b3;
+            padding: 1px 0px;
+        }
+        .btn-primary {
+            background-color: #F95E5E; /* Делаем кнопку "Выйти" красной */
+            color: white; /* Меняем цвет текста на белый */
+        }
+        .btn-primary:hover {
+            background-color: darkred; /* Добавляем эффект при наведении на кнопку "Выйти" */
+        }
+        .btn-secondary {
+            background-color: #32A9FF; /* Делаем кнопку "Мои товары" синей */
+            color: white; /* Меняем цвет текста на белый */
+        }
+        .btn-secondary:hover {
+            background-color: darkblue; /* Добавляем эффект при наведении на кнопку "Мои товары" */
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand text-white offset-3" style="font-weight: 700;" href="main.html">Avito</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Переключатель навигации">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-center offset-1" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link text-white" aria-current="page" href="main.html">Главная</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active text-secondary" href="my_tovari.html">Мои Товары</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="profile.html">Профиль</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" style="background-color: #32A9FF; color: #ffffff; border-radius: 10px; padding: 10px 20px;" href="authorization.html">Войти</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+
+    <!-- Карусель -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-8">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://via.placeholder.com/150" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://via.placeholder.com/150" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://via.placeholder.com/150" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Карточка продавца -->
+            <div class="col-md-4">
+                <div class="card h-100 bg-light">
+                    <img src="https://via.placeholder.com/150" alt="" class='card-img-top'>
+                    <div class='card-body'>
+                        <h5>Имя продавца</h5>
+                        <p>Телефон: +7 123 456 78 90</p>
+                        <p>Город: Москва</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Описание -->
+            <div class='col-md-8 mt-3'>
+                <div class='card bg-light'>
+                    <div class='card-body'>
+                        Описание товара
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Скрипт Bootstrap -->
+    <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js' integrity='sha384-HwwvtgBNo3bZJJLYd8oVXjrBZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm' crossorigin='anonymous'></script>
+
+</body>
+</html>
